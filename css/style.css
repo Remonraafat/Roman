@@ -1,0 +1,89 @@
+:root
+{
+    --mainColer: #19283f;
+    --secondColor: #1bb8c5;
+    --therdColor: #ffc400;
+    --sectionColor: #eff7fa;
+
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+     height: 1000px;
+}
+/* Start Navbar */
+.navbar
+{
+    background-color: var(--mainColer);
+}
+.navbar .nav-item .nav-link
+{
+    color: #fff;
+}
+.navbar .nav-item .active,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:focus
+{
+    color: var(--secondColor);
+}
+.navbar  .search
+{
+    border-left: 3px solid var(--secondColor);
+}
+.navbar  .search i 
+{
+    color: var(--secondColor);
+}
+/* End Navbar */
+
+/* Start landing */
+.landing
+{
+    background-color: var(--mainColer);
+    min-height: calc(100vh - 74px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* start feature */
+.feature .main-title
+{
+    position: relative;
+}
+.feature .main-title::after
+{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--secondColor);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feature .icon-holder
+{
+    position: relative;
+    height: 200px;
+}
+.feature .icon-holder  i
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feature .icon-holder  i.number
+{
+    font-size: 12rem;
+    color: var(--sectionColor);
+}
+.feature .icon-holder  i.icon
+{
+    color: var(--secondColor);
+}
+.feature .feat h4 
+{
+    color: var(--therdColor);
+}
+/* end feature */
