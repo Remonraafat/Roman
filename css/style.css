@@ -11,6 +11,60 @@ body
     font-family: 'Poppins', sans-serif;
      height: 1000px;
 }
+
+/* top btn */
+.top-btn
+{
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--mainColer);
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+    transition: 0.5s;
+}
+.top-btn span
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.top-btn i 
+{
+    color: var(--sectionColor);
+    font-size: 28px;
+    font-weight: bold;
+}
+.top-btn:hover i
+{
+    animation-name: toTop;
+    animation-duration: 1s;
+    animation-iteration-count:initial
+}
+
+.top-btn.show 
+{
+    display: block;
+    transition: 0.5s;
+}
+@keyframes toTop {
+ 0%
+ {
+    transform: rotate(0);
+ }
+ 100%
+ {
+    transform: rotate(360deg);
+ }   
+}
 /* Start Navbar */
 .navbar
 {
@@ -44,6 +98,16 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("/img/wallpar.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+.landing .get-start
+{
+    background-color: var(--secondColor);
+    color: #fff;
 }
 /* start feature */
 .feature .main-title
@@ -87,3 +151,175 @@ body
     color: var(--therdColor);
 }
 /* end feature */
+/* start galary */
+.galary
+{
+    background: #eff7fa;
+}
+.galary .wrapper
+{
+    
+    margin: 100px auto;
+    max-width: 1100px;
+    
+}
+.galary .wrapper .items
+{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.galary .wrapper .items .item 
+{
+    color:var(--secondColor);
+    border: 1px solid var(--secondColor);
+    padding: 10px 14px;
+    margin:  0 10px;
+    cursor: pointer;
+    transform:skewX(200deg);
+   font-weight: 600;
+   transition: 0.5s;
+}
+.galary .wrapper .items .item.active
+{
+    color: #fff;
+    background-color: var(--secondColor);
+}
+.galary .wrapper .items .item:hover
+{
+    color: #fff;
+    background-color: var(--secondColor);
+}
+/* galary-content */
+.galary-content
+{
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 30px;
+}
+.galary-content .image
+{
+    width: calc(100%/4);
+    overflow: hidden;
+    padding: 6px;
+
+}
+.galary-content .image.hide 
+{
+    display: none;
+}
+.galary-content .image.show 
+{
+    display: block;
+    animation: showImage 0.4s ease;
+}
+@keyframes showImage {
+    0%
+    {
+        transform: rotate(0);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    
+}
+.galary-content .image span
+{
+    display: flex;
+    width: 100%;
+    transition: all 0.5 ease-in-out;
+}
+.galary-content .image img 
+{
+    width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.galary-content .image:hover img
+{
+ transform: scale(1.3);   
+} 
+
+/* preview-img */
+.preview-img
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 30%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9000;
+    display: none;
+}
+.preview-img .icon
+{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.preview-img .icon i
+{
+    color: #f00;
+    font-size: 32px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.preview-img .imgBox
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+.preview-img .imgBox img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.preview-img.show
+{
+    display: block;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
+/* end galary */
+
+
+
+@media (max-width: 900px) {
+    .galary-content .image
+    {
+        width: calc(100%/3);
+    }
+    .preview-img .imgBox
+     {
+        width: 400px;
+        height: 400px;
+     }
+}
+@media (max-width: 768px) {
+    .galary-content .image
+    {
+        width: calc(100%/1);
+    }
+    .preview-img .imgBox
+     {
+        width: 350px;
+        height: 350px;
+     }
+}
