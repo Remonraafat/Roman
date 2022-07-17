@@ -11,7 +11,24 @@ body
     font-family: 'Poppins', sans-serif;
      height: 1000px;
 }
-
+/* main  */
+.main-btn
+{
+    background-color: var(--secondColor);
+    color: #fff;
+    border-radius: 20px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 20px 0; 
+}
+.main-btn:hover
+{
+    outline: 1px solid var(--secondColor);
+    border: 1px solid var(--secondColor);
+    background-color: var(--secondColor);
+    color: #fff;
+}
 /* top btn */
 .top-btn
 {
@@ -298,9 +315,85 @@ body
     transform: translate(-50%,-50%) scale(1);
 }
 /* end galary */
-
-
-
+/* start about */
+.about .sec-about 
+{
+ max-width: 600px;
+ margin: 50px auto;
+}
+/* retina-design */
+.retina-design .img-design
+{
+    padding: 30px 0;
+}
+/* start meet */
+.meet 
+{
+    padding: 80px 0;
+    background-color: #fff;
+}
+.meet h1 
+{
+    color: var(--therdColor);
+    font-weight: 600;
+}
+.meet p 
+{
+    font-weight: 600;
+}
+.meet .img-box h4 
+{
+    background-color: var(--secondColor);
+}
+/* start start job */
+.s-job
+{
+    background-color: var(--mainColer);
+}
+.s-job p 
+{
+    padding-bottom: 20px;
+}
+/* start blog */
+.blog .box 
+{
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    overflow: hidden;
+}
+/* start sub */
+.sub
+{
+    background-color: var(--therdColor);
+    padding: 20px 0;
+}
+.sub span
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub form input
+{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    
+}
+.sub form input::placeholder
+{
+    color: #fff;
+}
+.sub form input:focus,
+.sub form input:hover
+{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+.sub button
+{
+    background-color: var(--mainColer);
+}
 @media (max-width: 900px) {
     .galary-content .image
     {
