@@ -11,6 +11,10 @@ body
     font-family: 'Poppins', sans-serif;
      height: 1000px;
 }
+a
+{
+    text-decoration: none;
+}
 /* main  */
 .main-btn
 {
@@ -393,6 +397,33 @@ body
 .sub button
 {
     background-color: var(--mainColer);
+}
+/* start footer */
+footer
+{
+    background-color: var(--mainColer);
+}
+footer ul li a
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+footer  .facebook
+{
+    background-color: #1877f2;
+}
+footer  .youtube
+{
+    background-color: #ff0000;
+}
+footer  .github
+{
+    background-color: #000;
+}
+footer  .linkedin
+{
+    background-color: #0077b5;
 }
 @media (max-width: 900px) {
     .galary-content .image
