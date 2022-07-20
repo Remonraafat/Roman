@@ -10,6 +10,7 @@ body
 {
     font-family: 'Poppins', sans-serif;
      height: 1000px;
+     transition: 0.5s;
 }
 a
 {
@@ -86,10 +87,12 @@ a
     transform: rotate(360deg);
  }   
 }
+
 /* Start Navbar */
 .navbar
 {
     background-color: var(--mainColer);
+    
 }
 .navbar .nav-item .nav-link
 {

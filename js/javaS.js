@@ -67,3 +67,30 @@ function preview(element){
         previewBox.classList.remove('show')
     }
 }
+
+
+const themes = {
+    dark: {
+        '--mainColer': '#000',
+        '--secondColor' : '#fff',
+    },
+    default: {
+        '--primary-color': 'tomato',
+        '--secondary-color': '#000',
+    },
+    red: {
+
+    },
+    orange:{
+        
+    }
+  };
+  [...document.querySelectorAll('.color-button')].forEach(el => {
+      el.addEventListener('click', () => {
+          const theme = themes[el.dataset.theme];
+          for (var variable in theme) {
+              document.documentElement.style.setProperty(variable, theme[variable]);
+          };
+      });
+  });
+  
